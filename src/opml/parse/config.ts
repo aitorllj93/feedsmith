@@ -15,6 +15,9 @@ export const stopNodes = [
   'opml.head.windowLeft',
   'opml.head.windowBottom',
   'opml.head.windowRight',
+  'opml.head.systemPrompts',
+  'opml.head.systemPrompts.analyse',
+  'opml.head.systemPrompts.summarise',
   '*.outline.outline',
 ]
 

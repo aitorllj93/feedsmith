@@ -29,6 +29,10 @@ export type Head = {
   windowLeft?: number
   windowBottom?: number
   windowRight?: number
+  systemPrompts?: {
+    analyse?: string
+    summarise?: string
+  }
 }
 
 export type Body = {

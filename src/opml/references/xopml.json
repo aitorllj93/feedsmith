@@ -1,0 +1,65 @@
+{
+  "version": "3.0",
+  "head": {
+    "title": "Sample X-OPML 3.0",
+    "systemPrompts": {
+      "analyse": "Identify the key trends in each article.",
+      "summarise": "Provide a concise summary for each feed item."
+    }
+  },
+  "body": {
+    "outlines": [
+      {
+        "type": "webSite",
+        "title": "News Aggregator",
+        "description": "Latest news from multiple sources",
+        "outlines": [
+          {
+            "type": "webPage",
+            "title": "Tech News",
+            "description": "Technology updates",
+            "outlines": [
+              {
+                "type": "webPageElement",
+                "tag": "section",
+                "className": "w-full",
+                "outlines": [
+                  {
+                    "type": "reddit",
+                    "text": "Reddit Tech",
+                    "xmlUrl": "https://www.reddit.com/r/technology/.rss"
+                  }
+                ]
+              },
+              {
+                "type": "webPageElement",
+                "tag": "section",
+                "className": "w-[1/12]",
+                "outlines": [
+                  {
+                    "type": "youtube",
+                    "text": "Tech Reviews",
+                    "xmlUrl": "https://www.youtube.com/feeds/videos.xml?channel_id=..."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "webPage",
+            "title": "Events",
+            "description": "Upcoming events",
+            "outlines": [
+              {
+                "type": "calendar",
+                "text": "Event Calendar",
+                "xmlUrl": "https://calendar.google.com/calendar/ical/xyz/basic.ics",
+                "parser": "icsParser"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -13,6 +13,10 @@ describe('parseOutline', () => {
       '@title': 'Outline Link Title',
       '@version': '2.0',
       '@url': 'https://example.com/alternate',
+      '@classname': 'w-full',
+      '@tag': 'section',
+      '@template': 'news-feed',
+      '@parser': 'youtube',
       outline: [{ '@text': 'Child Outline 1' }, { '@text': 'Child Outline 2' }],
     }
     const expected = {
@@ -26,6 +30,10 @@ describe('parseOutline', () => {
       version: '2.0',
       url: 'https://example.com/alternate',
       outlines: [{ text: 'Child Outline 1' }, { text: 'Child Outline 2' }],
+      className: 'w-full',
+      tag: 'section',
+      template: 'news-feed',
+      parser: 'youtube',
     }
 
     expect(parseOutline(value)).toEqual(expected)
@@ -123,6 +131,10 @@ describe('parseHead', () => {
     windowLeft: 50,
     windowBottom: 500,
     windowRight: 700,
+    systemPrompts: {
+      analyse: 'Analyse this',
+      summarise: 'Summarise this',
+    },
   }
 
   it('should parse complete head object (with #text)', () => {
@@ -140,6 +152,10 @@ describe('parseHead', () => {
       windowleft: { '#text': '50' },
       windowbottom: { '#text': '500' },
       windowright: { '#text': '700' },
+      systemprompts: {
+        analyse: { '#text': 'Analyse this' },
+        summarise: { '#text': 'Summarise this' },
+      },
     }
 
     expect(parseHead(value)).toEqual(expectedFull)
@@ -160,6 +176,10 @@ describe('parseHead', () => {
       windowleft: '50',
       windowbottom: '500',
       windowright: '700',
+      systemprompts: {
+        analyse: 'Analyse this',
+        summarise: 'Summarise this',
+      },
     }
 
     expect(parseHead(value)).toEqual(expectedFull)
@@ -180,6 +200,10 @@ describe('parseHead', () => {
       windowleft: ['50', ''],
       windowbottom: ['500', ''],
       windowright: ['700', ''],
+      systemprompts: {
+        analyse: ['Analyse this', ''],
+        summarise: ['Summarise this', ''],
+      },
     }
 
     expect(parseHead(value)).toEqual(expectedFull)

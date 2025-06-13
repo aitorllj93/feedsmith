@@ -1,0 +1,41 @@
+<opml version="3.0">
+    <head>
+        <title>Sample X-OPML 3.0</title>
+        <systemPrompts>
+            <analyse>Identify the key trends in each article.</analyse>
+            <summarise>Provide a concise summary for each feed item.</summarise>
+        </systemPrompts>
+    </head>
+    <body>
+        <outline type="webSite"
+                 title="News Aggregator"
+                 description="Latest news from multiple sources">
+            <outline type="webPage"
+                     title="Tech News"
+                     description="Technology updates">
+                <outline type="webPageElement"
+                         tag="section"
+                         className="w-full">
+                    <outline type="reddit"
+                             text="Reddit Tech"
+                             xmlUrl="https://www.reddit.com/r/technology/.rss" />
+                </outline>
+                <outline type="webPageElement"
+                         tag="section"
+                         className="w-[1/12]">
+                    <outline type="youtube"
+                             text="Tech Reviews"
+                             xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=..." />
+                </outline>
+            </outline>
+            <outline type="webPage"
+                     title="Events"
+                     description="Upcoming events">
+                <outline type="calendar"
+                         text="Event Calendar"
+                         xmlUrl="https://calendar.google.com/calendar/ical/xyz/basic.ics"
+                         parser="icsParser" />
+            </outline>
+        </outline>
+    </body>
+</opml>

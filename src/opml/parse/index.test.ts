@@ -2,7 +2,15 @@ import { describe, expect, it } from 'bun:test'
 import { parse } from './index.js'
 
 describe('parse', () => {
-  const references = ['category', 'directory', 'places', 'script', 'countries', 'subscriptions']
+  const references = [
+    'category',
+    'directory',
+    'places',
+    'script',
+    'countries',
+    'subscriptions',
+    'xopml',
+  ]
 
   for (const reference of references) {
     it(`should correctly parse ${reference} OPML to JSON`, async () => {

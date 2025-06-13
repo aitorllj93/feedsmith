@@ -1,4 +1,4 @@
-import type { ParseFunction, Unreliable } from '../../common/types.js'
+import type { ParseFunction } from '../../common/types.js'
 import {
   isObject,
   parseArrayOf,
@@ -34,6 +34,21 @@ export const parseOutline: ParseFunction<Outline> = (value) => {
     version: parseString(value['@version']),
     url: parseString(value['@url']),
     outlines: parseArrayOf(value.outline, parseOutline),
+    className: parseString(value['@classname']),
+    tag: parseString(value['@tag']),
+    template: parseString(value['@template']),
+    parser: parseString(value['@parser']),
+  })
+}
+
+export const parsePrompts: ParseFunction<Head['systemPrompts']> = (value) => {
+  if (!isObject(value)) {
+    return
+  }
+
+  return trimObject({
+    analyse: parseSingularOf(value.analyse, parseTextString),
+    summarise: parseSingularOf(value.summarise, parseTextString),
   })
 }
 
@@ -58,6 +73,7 @@ export const parseHead: ParseFunction<Head> = (value) => {
     windowLeft: parseSingularOf(value.windowleft, parseTextNumber),
     windowBottom: parseSingularOf(value.windowbottom, parseTextNumber),
     windowRight: parseSingularOf(value.windowright, parseTextNumber),
+    systemPrompts: parsePrompts(value.systemprompts),
   })
 }
 
