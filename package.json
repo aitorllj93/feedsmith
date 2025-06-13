@@ -37,7 +37,6 @@
   },
   "files": ["dist"],
   "scripts": {
-    "prepare": "lefthook install",
     "lint:tsc": "tsc --pretty --noEmit",
     "lint:biome": "bunx @biomejs/biome check --write --no-errors-on-unmatched --files-ignore-unknown=true",
     "build": "rm -rf dist && tsc"
