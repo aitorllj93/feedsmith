@@ -1,0 +1,1 @@
+{"version":3,"file":"config.js","sourceRoot":"","sources":["../../../src/opml/generate/config.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,iBAAiB,CAAA;AAE5C,MAAM,CAAC,MAAM,OAAO,GAAG,IAAI,UAAU,CAAC;IACpC,eAAe,EAAE,IAAI;IACrB,gBAAgB,EAAE,KAAK;IACvB,iBAAiB,EAAE,IAAI;IACvB,yBAAyB,EAAE,KAAK;IAChC,mBAAmB,EAAE,GAAG;IACxB,MAAM,EAAE,IAAI;CACb,CAAC,CAAA"}

@@ -1,0 +1,10 @@
+import type { ParseFunction } from '../../../common/types.js';
+import type { Feed, Image, Item, TextInput } from './types.js';
+export declare const parseImage: ParseFunction<Image>;
+export declare const retrieveImage: ParseFunction<Image>;
+export declare const parseItem: ParseFunction<Item>;
+export declare const retrieveItems: ParseFunction<Array<Item>>;
+export declare const parseTextInput: ParseFunction<TextInput>;
+export declare const retrieveTextInput: ParseFunction<TextInput>;
+export declare const parseFeed: ParseFunction<Feed>;
+export declare const retrieveFeed: ParseFunction<Feed>;

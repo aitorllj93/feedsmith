@@ -1,0 +1,14 @@
+import type { ParseFunction } from '../../../common/types.js';
+import type { Author, Category, Cloud, Enclosure, Feed, Image, Item, Source, TextInput } from './types.js';
+export declare const parseTextInput: ParseFunction<TextInput>;
+export declare const parseCloud: ParseFunction<Cloud>;
+export declare const parseSkipHours: ParseFunction<Array<number>>;
+export declare const parseSkipDays: ParseFunction<Array<string>>;
+export declare const parseEnclosure: ParseFunction<Enclosure>;
+export declare const parseSource: ParseFunction<Source>;
+export declare const parseImage: ParseFunction<Image>;
+export declare const parseCategory: ParseFunction<Category>;
+export declare const parseAuthor: ParseFunction<Author>;
+export declare const parseItem: ParseFunction<Item>;
+export declare const parseFeed: ParseFunction<Feed>;
+export declare const retrieveFeed: ParseFunction<Feed>;

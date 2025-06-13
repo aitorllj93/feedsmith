@@ -1,0 +1,15 @@
+import type { ParseFunction } from './types.js';
+import type { Category, Entry, Feed, Generator, Link, Person, Source } from './types.js';
+export declare const parseLink: ParseFunction<Link>;
+export declare const retrievePersonUri: ParseFunction<string>;
+export declare const parsePerson: ParseFunction<Person>;
+export declare const parseCategory: ParseFunction<Category>;
+export declare const retrieveGeneratorUri: ParseFunction<string>;
+export declare const parseGenerator: ParseFunction<Generator>;
+export declare const parseSource: ParseFunction<Source>;
+export declare const retrievePublished: ParseFunction<string>;
+export declare const retrieveUpdated: ParseFunction<string>;
+export declare const retrieveSubtitle: ParseFunction<string>;
+export declare const parseEntry: ParseFunction<Entry>;
+export declare const parseFeed: ParseFunction<Feed>;
+export declare const retrieveFeed: ParseFunction<Feed>;
