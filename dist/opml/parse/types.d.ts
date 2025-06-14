@@ -1,46 +1,47 @@
 export type Outline = {
-    text?: string;
-    type?: string;
-    isComment?: boolean;
-    isBreakpoint?: boolean;
-    created?: string;
-    category?: string;
-    description?: string;
-    xmlUrl?: string;
-    htmlUrl?: string;
-    language?: string;
-    title?: string;
-    version?: string;
-    url?: string;
-    outlines?: Array<Outline>;
-    className?: string;
-    tag?: string;
-    template?: string;
-    parser?: string;
-};
+  text?: string
+  type?: string
+  isComment?: boolean
+  isBreakpoint?: boolean
+  created?: string
+  category?: string
+  description?: string
+  xmlUrl?: string
+  htmlUrl?: string
+  language?: string
+  title?: string
+  version?: string
+  url?: string
+  outlines?: Array<Outline>
+  id?: string
+  className?: string
+  tag?: string
+  template?: string
+  parser?: string
+}
 export type Head = {
-    title?: string;
-    dateCreated?: string;
-    dateModified?: string;
-    ownerName?: string;
-    ownerEmail?: string;
-    ownerId?: string;
-    docs?: string;
-    expansionState?: Array<number>;
-    vertScrollState?: number;
-    windowTop?: number;
-    windowLeft?: number;
-    windowBottom?: number;
-    windowRight?: number;
-    systemPrompts?: {
-        analyse?: string;
-        summarise?: string;
-    };
-};
+  title?: string
+  dateCreated?: string
+  dateModified?: string
+  ownerName?: string
+  ownerEmail?: string
+  ownerId?: string
+  docs?: string
+  expansionState?: Array<number>
+  vertScrollState?: number
+  windowTop?: number
+  windowLeft?: number
+  windowBottom?: number
+  windowRight?: number
+  systemPrompts?: {
+    analyse?: string
+    summarise?: string
+  }
+}
 export type Body = {
-    outlines?: Array<Outline>;
-};
+  outlines?: Array<Outline>
+}
 export type Opml = {
-    head?: Head;
-    body?: Body;
-};
+  head?: Head
+  body?: Body
+}
