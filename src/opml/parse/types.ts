@@ -13,6 +13,10 @@ export type Outline = {
   version?: string
   url?: string
   outlines?: Array<Outline>
+  className?: string
+  tag?: string
+  template?: string
+  parser?: string
 }
 
 export type Head = {
