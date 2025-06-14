@@ -15,6 +15,7 @@
                      description="Technology updates">
                 <outline type="webPageElement"
                          tag="section"
+                         id="test1"
                          className="w-full">
                     <outline type="reddit"
                              text="Reddit Tech"
@@ -22,6 +23,7 @@
                 </outline>
                 <outline type="webPageElement"
                          tag="section"
+                         id="test2"
                          className="w-[1/12]">
                     <outline type="youtube"
                              text="Tech Reviews"

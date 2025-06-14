@@ -13,6 +13,7 @@ export type Outline = {
   version?: string
   url?: string
   outlines?: Array<Outline>
+  id?: string
   className?: string
   tag?: string
   template?: string

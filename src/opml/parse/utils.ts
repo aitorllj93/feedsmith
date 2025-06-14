@@ -34,6 +34,7 @@ export const parseOutline: ParseFunction<Outline> = (value) => {
     version: parseString(value['@version']),
     url: parseString(value['@url']),
     outlines: parseArrayOf(value.outline, parseOutline),
+    id: parseString(value['@id']),
     className: parseString(value['@classname']),
     tag: parseString(value['@tag']),
     template: parseString(value['@template']),

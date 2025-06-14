@@ -22,6 +22,7 @@
               {
                 "type": "webPageElement",
                 "tag": "section",
+                "id": "test1",
                 "className": "w-full",
                 "outlines": [
                   {
@@ -34,6 +35,7 @@
               {
                 "type": "webPageElement",
                 "tag": "section",
+                "id": "test2",
                 "className": "w-[1/12]",
                 "outlines": [
                   {
